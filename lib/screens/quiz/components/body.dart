@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_footbool/screens/quiz/components/progress_bar.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -13,28 +14,9 @@ class Body extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 25),
           child: Column(
-            children: [
-              const SizedBox(height: 20),
-              Container(
-                width: double.infinity,
-                height: 35,
-                decoration: BoxDecoration(
-                  border: Border.all(),
-                  borderRadius: BorderRadius.circular(20),
-                ),
-                child: Stack(
-                  children: [
-                    LayoutBuilder(
-                        builder: (context, constraints) => Container(
-                              width: constraints.maxWidth * 0.5,
-                              decoration: BoxDecoration(
-                                color: Colors.red,
-                                borderRadius: BorderRadius.circular(50),
-                              ),
-                            ))
-                  ],
-                ),
-              )
+            children: const [
+              SizedBox(height: 20),
+              ProgressBar(),
             ],
           ),
         ),
