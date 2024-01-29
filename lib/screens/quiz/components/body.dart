@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:flutter_footbool/models/Questions.dart';
 import 'package:flutter_footbool/screens/quiz/components/progress_bar.dart';
+import 'package:flutter_footbool/screens/quiz/components/question_card.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
@@ -27,7 +29,7 @@ class Body extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Spacer(),
+                  const Spacer(),
                   Text(
                     "1/10",
                     style: TextStyle(
@@ -36,7 +38,9 @@ class Body extends StatelessWidget {
                     ),
                   ),
                 ],
-              )
+              ),
+              const SizedBox(height: 10),
+              QuestionCard()
             ],
           ),
         ),
