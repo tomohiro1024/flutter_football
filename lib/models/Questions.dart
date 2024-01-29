@@ -1,9 +1,9 @@
 class Question {
   final int? id, answer;
-  final String? question;
+  String question;
   final List<String>? options;
 
-  Question({this.id, this.question, this.answer, this.options});
+  Question({this.id, required this.question, this.answer, this.options});
 }
 
 const List sample_data = [

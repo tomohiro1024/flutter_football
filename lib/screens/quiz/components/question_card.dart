@@ -5,9 +5,12 @@ import 'body.dart';
 import 'option.dart';
 
 class QuestionCard extends StatelessWidget {
-  const QuestionCard({
+  QuestionCard({
     super.key,
+    required this.question,
   });
+
+  final Question question;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +23,7 @@ class QuestionCard extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            sample_data[0]["question"],
+            question.question,
             style: const TextStyle(
               fontSize: 20.0,
               color: Colors.black,

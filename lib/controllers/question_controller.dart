@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:flutter_footbool/models/Questions.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 
@@ -8,6 +9,15 @@ class QuestionController extends GetxController
   late Animation _animation;
 
   Animation get animation => _animation;
+
+  final List<Question> _questions = sample_data.map((question) => Question(
+    id: question["id"],
+    question: question["question"],
+    options: question["option"],
+    answer: question["answer_index"],
+  )).toList();
+
+  List<Question> get questions => _questions;
 
   @override
   void onInit() {
