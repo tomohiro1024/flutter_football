@@ -29,10 +29,11 @@ class QuestionCard extends StatelessWidget {
               color: Colors.black,
             ),
           ),
-          Option(),
-          Option(),
-          Option(),
-          Option(),
+          ...List.generate(
+            question.options!.length,
+            (index) => Option(
+                text: question.options![index], index: index, press: () {}),
+          ),
         ],
       ),
     );
