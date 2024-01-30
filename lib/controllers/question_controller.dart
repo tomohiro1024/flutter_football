@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_footbool/models/Questions.dart';
+import 'package:flutter_footbool/models/questions.dart';
 import 'package:get/get.dart';
 import 'package:get/state_manager.dart';
 
@@ -10,7 +10,7 @@ class QuestionController extends GetxController
 
   Animation get animation => _animation;
 
-  final List<Question> _questions = sample_data.map((question) => Question(
+  final List<Question> _questions = questionData.map((question) => Question(
     id: question["id"],
     question: question["question"],
     options: question["options"],

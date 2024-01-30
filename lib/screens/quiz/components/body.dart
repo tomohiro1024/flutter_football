@@ -3,7 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_footbool/controllers/question_controller.dart';
-import 'package:flutter_footbool/models/Questions.dart';
+import 'package:flutter_footbool/models/questions.dart';
 import 'package:flutter_footbool/screens/quiz/components/progress_bar.dart';
 import 'package:flutter_footbool/screens/quiz/components/question_card.dart';
 import 'package:get/get.dart';

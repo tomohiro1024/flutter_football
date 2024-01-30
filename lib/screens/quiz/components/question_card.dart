@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../models/Questions.dart';
+import '../../../models/questions.dart';
 import 'body.dart';
 import 'option.dart';
 
