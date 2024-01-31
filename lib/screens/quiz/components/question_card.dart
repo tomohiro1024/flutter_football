@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_footbool/controllers/question_controller.dart';
+import 'package:get/get.dart';
 
 import '../../../models/questions.dart';
 import 'body.dart';
@@ -14,6 +16,8 @@ class QuestionCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // QuestionControllerのメソッドを使う
+    QuestionController _controller = Get.put(QuestionController());
     return Container(
       padding: const EdgeInsets.all(25),
       decoration: BoxDecoration(
@@ -29,10 +33,15 @@ class QuestionCard extends StatelessWidget {
               color: Colors.black,
             ),
           ),
+          // ここにイメージ画像を貼る予定
+          // SizedBox(height: 50),
           ...List.generate(
             question.options!.length,
             (index) => Option(
-                text: question.options![index], index: index, press: () {}),
+              text: question.options![index],
+              index: index,
+              press: () => _controller.checkAnswer(question, index),
+            ),
           ),
         ],
       ),

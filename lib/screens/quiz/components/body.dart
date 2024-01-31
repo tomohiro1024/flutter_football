@@ -13,6 +13,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // QuestionControllerのメソッドを使う
     QuestionController _questionController = Get.put(QuestionController());
     return Scaffold(
       body: SafeArea(
