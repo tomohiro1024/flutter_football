@@ -41,7 +41,7 @@ class QuestionController extends GetxController
     _animationController =
         AnimationController(duration: const Duration(seconds: 30), vsync: this);
 
-    _animation = Tween<double>(begin: 0, end: 1).animate(_animationController)
+    _animation = Tween<double>(begin: 1, end: 0).animate(_animationController)
       ..addListener(() {
         // update like setState
         update();
