@@ -37,7 +37,8 @@ class Option extends StatelessWidget {
           return InkWell(
             onTap: press,
             child: Container(
-              margin: const EdgeInsets.only(top: 25),
+              height: 70,
+              margin: const EdgeInsets.only(top: 20),
               padding: const EdgeInsets.all(25),
               decoration: BoxDecoration(
                 border: Border.all(color: getColor()),

@@ -34,7 +34,7 @@ class QuestionCard extends StatelessWidget {
             ),
           ),
           // ここにイメージ画像を貼る予定
-          // SizedBox(height: 50),
+          // SizedBox(height: 88),
           ...List.generate(
             question.options!.length,
             (index) => Option(
