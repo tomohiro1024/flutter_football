@@ -47,6 +47,8 @@ class Body extends StatelessWidget {
             const SizedBox(height: 10),
             Expanded(
               child: PageView.builder(
+                physics: const NeverScrollableScrollPhysics(),
+                controller: _questionController.pageController,
                 itemCount: _questionController.questions.length,
                 itemBuilder: (context, index) => QuestionCard(
                   question: _questionController.questions[index],

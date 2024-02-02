@@ -10,6 +10,9 @@ class QuestionController extends GetxController
 
   Animation get animation => _animation;
 
+  PageController _pageController = PageController();
+  PageController get pageController => _pageController;
+
   final List<Question> _questions = questionData
       .map((question) => Question(
             id: question["id"],
