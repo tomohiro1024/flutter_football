@@ -35,9 +35,12 @@ class WelcomeScreen extends StatelessWidget {
                   width: double.infinity,
                   alignment: Alignment.center,
                   padding: const EdgeInsets.all(15),
-                  decoration: const BoxDecoration(
-                    color: Colors.blue,
-                    borderRadius: BorderRadius.all(Radius.circular(12)),
+                  decoration: BoxDecoration(
+                    color: Colors.cyan,
+                    borderRadius: const BorderRadius.all(Radius.circular(12)),
+                    border: Border.all(
+                      color: Colors.pinkAccent,
+                    ),
                   ),
                   child: const Text(
                     "Quiz Start!",
