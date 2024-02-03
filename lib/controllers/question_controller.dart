@@ -52,6 +52,8 @@ class QuestionController extends GetxController
 
     _animationController.forward();
 
+    _pageController = PageController();
+
     super.onInit();
   }
 
@@ -69,5 +71,14 @@ class QuestionController extends GetxController
 
     _animationController.stop();
     update();
+
+    Future.delayed(const Duration(seconds: 1), (){
+      _isAnswered = false;
+      _pageController.nextPage(duration: const Duration(microseconds: 250), curve: Curves.ease);
+
+      _animationController.reset();
+
+      _animationController.forward();
+    });
   }
 }
