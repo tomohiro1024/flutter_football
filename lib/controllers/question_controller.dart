@@ -57,6 +57,7 @@ class QuestionController extends GetxController
     super.onInit();
   }
 
+  // option.dartで選択肢をタップした時の処理内容
   void checkAnswer(Question question, int selectedIndex) {
     _isAnswered = true;
     // 答えの番号
@@ -72,13 +73,20 @@ class QuestionController extends GetxController
     _animationController.stop();
     update();
 
-    Future.delayed(const Duration(seconds: 1), (){
+    Future.delayed(const Duration(seconds: 1), () {
+      nextQuestion();
+    });
+  }
+
+  void nextQuestion() {
+    if (_questionNumber.value != _questions.length) {
       _isAnswered = false;
-      _pageController.nextPage(duration: const Duration(microseconds: 250), curve: Curves.ease);
+      _pageController.nextPage(
+          duration: const Duration(microseconds: 250), curve: Curves.ease);
 
       _animationController.reset();
 
       _animationController.forward();
-    });
+    }
   }
 }
