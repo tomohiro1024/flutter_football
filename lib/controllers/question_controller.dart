@@ -42,7 +42,7 @@ class QuestionController extends GetxController
   @override
   void onInit() {
     _animationController =
-        AnimationController(duration: const Duration(seconds: 30), vsync: this);
+        AnimationController(duration: const Duration(seconds: 20), vsync: this);
 
     _animation = Tween<double>(begin: 1, end: 0).animate(_animationController)
       ..addListener(() {
@@ -50,7 +50,8 @@ class QuestionController extends GetxController
         update();
       });
 
-    _animationController.forward();
+    // タイマーが切れたら次の質問へ(1問目)
+    _animationController.forward().whenComplete(nextQuestion);
 
     _pageController = PageController();
 
@@ -86,7 +87,8 @@ class QuestionController extends GetxController
 
       _animationController.reset();
 
-      _animationController.forward();
+    // タイマーが切れたら次の質問へ(2問目以降)
+      _animationController.forward().whenComplete(nextQuestion);
     }
   }
 }
