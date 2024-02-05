@@ -19,11 +19,6 @@ class Body extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            const SizedBox(height: 20),
-            const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 25),
-              child: ProgressBar(),
-            ),
             const SizedBox(height: 15),
             Text(
               "問題1",
@@ -44,7 +39,12 @@ class Body extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 15),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25),
+              child: ProgressBar(),
+            ),
+            const SizedBox(height: 20),
             Expanded(
               child: PageView.builder(
                 physics: const NeverScrollableScrollPhysics(),
