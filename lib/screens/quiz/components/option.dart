@@ -52,6 +52,7 @@ class Option extends StatelessWidget {
                   decoration: BoxDecoration(
                     border: Border.all(color: getColor()),
                     borderRadius: BorderRadius.circular(10),
+                    color: Colors.orange
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
