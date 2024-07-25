@@ -11,9 +11,8 @@ const String teamName = 'このチームは？';
 const List questionData = [
   {
     "id": 1,
-    "question":
-        teamName,
-    "options": ['Apple', 'Google', 'Facebook'],
+    "question": teamName,
+    "options": ['トッテナム', 'マンチェスターU', 'チェルシー'],
     "answer_index": 1,
   },
   {

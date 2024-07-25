@@ -52,9 +52,7 @@ class QuestionController extends GetxController
 
     // タイマーが切れたら次の質問へ(1問目)
     _animationController.forward().whenComplete(nextQuestion);
-
     _pageController = PageController();
-
     super.onInit();
   }
 
