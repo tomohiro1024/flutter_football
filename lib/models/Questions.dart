@@ -18,19 +18,19 @@ const List questionData = [
   {
     "id": 2,
     "question": teamName,
-    "options": ['Jun 2017', 'Jun 2017', 'May 2017'],
+    "options": ['レアル・マドリード', 'バルセロナ', 'セビージャ'],
     "answer_index": 2,
   },
   {
     "id": 3,
     "question": teamName,
-    "options": ['Double', 'Int', 'Char'],
+    "options": ['インテル', 'ACミラン', 'ユヴェントス'],
     "answer_index": 2,
   },
   {
     "id": 4,
     "question": teamName,
-    "options": ['Cin', 'Count>>', 'Cout'],
+    "options": ['バイエルン', 'ドルトムント', 'レヴァークーゼン'],
     "answer_index": 2,
   },
 ];
